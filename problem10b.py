@@ -14,7 +14,7 @@ def parse_input(filename):
             # Parse the numbers in parentheses
             numbers_part = parts[1]
             numbers = numbers_part.split(")")            
-            
+
             desired_state = numbers[-1] # last entry is the desired state
             desired_state = desired_state[2:len(desired_state)-1] # remove first and last { }
             #print(desired_state)
@@ -79,19 +79,19 @@ def find_fewest_clicks(final_state, buttons):
 final_state, buttons = parse_input('sample_input10.txt')
 total = 0
 for i in range(len(final_state)):
-    #print(final_state[i], " : ", buttons[i ])
-    clicks = find_fewest_clicks(final_state[i], buttons[i])
-    #print(clicks)
-    total += clicks
-
-print(total)
-
-final_state, buttons = parse_input('input10.txt')
-total = 0
-for i in range(len(final_state)):
     print(final_state[i], " : ", buttons[i ])
     clicks = find_fewest_clicks(final_state[i], buttons[i])
     print(clicks)
     total += clicks
 
 print(total)
+
+# final_state, buttons = parse_input('input10.txt')
+# total = 0
+# for i in range(len(final_state)):
+#     print(final_state[i], " : ", buttons[i ])
+#     clicks = find_fewest_clicks(final_state[i], buttons[i])
+#     print(clicks)
+#     total += clicks
+
+# print(total)
